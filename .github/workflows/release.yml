@@ -30,7 +30,7 @@ jobs:
         with:
           repo_token: ${{ secrets.REPO_ACCESS_TOKEN }}
           file: ${{ github.workspace }}/doc2scan-macos-installer-x64/doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
-          asset_name: doc2scan-macos-installer-x64/doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
+          asset_name: doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
           overwrite: true
 
       
