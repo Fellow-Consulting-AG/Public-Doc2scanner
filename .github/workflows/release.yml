@@ -10,7 +10,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Release PKG:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -29,7 +29,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          file: ${{ github.workspace }}/doc2scan-macos-installer-x64/*
+          file: ${{ github.workspace }}/doc2scan-macos-installer-x64/doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
           asset_name: doc2scan-macos-installer-x64/doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
           overwrite: true
 
