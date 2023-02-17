@@ -1,2 +1,4 @@
 # Doc2 Scanner
-Public Doc2 Scanner Repository with the newest downloader files.
+Get Yourself the newest Installers for the doc2scanner
+
+Can be used on [Alfred](https://app.polydocs.io/alfred/dashboard)
