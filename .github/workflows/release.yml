@@ -10,21 +10,32 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Create Release [${{ github.event.head_commit.message }}]
-        uses: elgohr/Github-Release-Action@v4
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          title: Release ${{ github.event.head_commit.message }}
+          tag_name: ${{ github.event.head_commit.message }}
+          release_name: Release ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false
 
       - name: Upload Package to Release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          tag: ${{ github.event.head_commit.message }}
+          tag: "${{ github.event.head_commit.message }}"
           file: ${{ github.workspace }}/doc2scan-macos-installer-x64/doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
-          asset_name: doc2scan-macos-installer-x64-${{ github.event.head_commit.message }}.pkg
+          asset_name: doc2scan-macos-installer-x64.pkg
+          overwrite: true
+      - name: Upload MSI to Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          tag: "${{ github.event.head_commit.message }}"
+          file: ${{ github.workspace }}/doc2scan-windows-installer/doc2scan-windows-installer-${{ github.event.head_commit.message }}.msi
+          asset_name: doc2scan-windows-installer.msi
           overwrite: true
 
       
