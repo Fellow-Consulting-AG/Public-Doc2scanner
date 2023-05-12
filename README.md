@@ -35,7 +35,9 @@ It should look something like this:
 3. To do a Basic scan open this URL and replace the host with your own. 
 https://local.polydocs.io:12500/scan?host=YOUR_HOST&source=platen&color=RGB24
 
-This Scans 1 page of the document in color mode. Here is a Table with all possible Settings you can add
+## Scan Settings
+
+The Scan Settings are defined in the URL. You can change them to your liking. Here is a list of all possible settings.
 
 | Feature | Options | Description |
 | ----------- | ---------------- | -----------|
