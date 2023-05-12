@@ -10,7 +10,7 @@ Doc2scan is a scanner application that **automatically** discovers scanners in y
 - Customize scan settings such as **resolution** and **color mode**
 - Supports both **simplex** and **duplex** scanning
 - Supports **multi-page scanning**
-- Can be used with [DOC²](https://app.polydocs.io/) and [Alfred](https://app.polydocs.io/alfred/dashboard)
+- Can be used with [DOC²](https://app.polydocs.io/) and [Alfred](https://alfred-dms.com)
 
 
 ## Installation
@@ -23,7 +23,7 @@ Doc2scan is a scanner application that **automatically** discovers scanners in y
 
 ## Using Doc2Scan as Standalone
 
-Doc2Scan is not programmed to be a standalone Product. It's main use is for [DOC²](https://app.polydocs.io/) and [Alfred](https://app.polydocs.io/alfred/dashboard). However it is possible to use it as a standalone application. To do so Follow these steps.
+Doc2Scan is not programmed to be a standalone Product. It's main use is for [DOC²](https://app.polydocs.io/) and [Alfred](https://alfred-dms.com). However it is possible to use it as a standalone application. To do so Follow these steps.
 
 1. Search Scanners in your local network with this URL: https://local.polydocs.io:12500/scanners
 
