@@ -66,4 +66,4 @@ your report in this table for the benefit of other interested users:
 
 ## License
 
-See [License](LICENSE) for more information.
+Doc2scan is licensed under the [Polydocs TWAIN License Agreement](LICENSE).
